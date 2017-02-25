@@ -23,6 +23,5 @@
     "psr-0": {
       "Rik\\RikDynamicTemplatesBundle\\": ""
     }
-  },
-  "minimum-stability": "stable"
+  }
 }
