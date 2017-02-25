@@ -20,15 +20,15 @@ class DynamicTemplatesListener {
         if($attrs->get('_controller') == 'Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction') {
             $template = $attrs->get('template');
 
-            preg_match_all('/{(\w+)}+/', $template, $matches);
+            $items = $attrs->get('_route_params');
 
-            if(!empty($matches['1'])) {
+            unset($items['template']);
+            
+            if(!empty($items)) {
                 $replace = [];
 
-                foreach($matches['1'] as $match) {
-                    if($attrs->has($match)) {
-                        $replace['{' . $match . '}'] = $attrs->get($match);
-                    }
+                foreach($items as $name => $item) {
+                    $replace['{' . $name . '}'] = $item;
                 }
 
                 if(!empty($replace)) $template = strtr($template, $replace);
