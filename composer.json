@@ -1,0 +1,28 @@
+{
+  "name": "rik/dynamictemplatesbundle",
+  "description": "Dynamic Templates for Symfony routing",
+  "version": "1.1.0",
+  "type": "symfony-bundle",
+  "homepage": "https://github.com/Cach/RikDynamicTemplatesBundle",
+  "license": "MIT",
+  "keywords": [
+    "dynamic templates",
+    "symfony"
+  ],
+  "authors": [
+    {
+      "name": "Alex",
+      "email": "cach-a@ukr.net"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "symfony/framework-bundle": "2.*|3.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "Rik\\RikDynamicTemplatesBundle\\": ""
+    }
+  },
+  "minimum-stability": "stable"
+}

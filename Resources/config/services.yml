@@ -1,0 +1,6 @@
+services:
+    rik.dynamic_templates.listener:
+        class: Rik\DynamicTemplatesBundle\EventListener\DynamicTemplatesListener
+        arguments: ["@templating"]
+        tags:
+            - { name: kernel.event_listener, event: kernel.request }
